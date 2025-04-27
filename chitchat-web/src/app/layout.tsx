@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import { Metadata } from 'next';
+import Providers from '@/components/providers/Providers';
 
 export const metadata: Metadata = {
   title: 'ChitChat',
@@ -14,7 +15,9 @@ export default function RootLayout({
   return (
     <html lang="zh-CN">
       <body>
-        {children}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );
